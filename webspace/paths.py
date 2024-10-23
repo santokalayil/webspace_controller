@@ -1,0 +1,14 @@
+from pathlib import Path
+
+WEBSPACE_PKG_DIR_FULLPATH = Path(__file__).parent
+PWD_FULLPATH = Path(".").resolve()
+
+WEBSPACE_PKG_DIR = WEBSPACE_PKG_DIR_FULLPATH.relative_to(PWD_FULLPATH)
+
+PROJECT_DIR = WEBSPACE_PKG_DIR.parent
+RESOURCES_DIR = PROJECT_DIR / "resources"
+WEB_RESOURCES_DIR = RESOURCES_DIR / "web"
+
+STATIC_ASSETS_DIR = WEB_RESOURCES_DIR / "static"
+TEMPLATES_DIR = WEB_RESOURCES_DIR / "templates"
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webspace Home</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <a href="/api">API TEST LINK</a>
+    <div hx-get="/current_time" hx-trigger="every 2s"></div>
+    <h1>HOME PAGE HERE</h1>
+    <p><a href="{{ url_for('render_ui') }}">PAGE ID: {{ id }}</a></p>
+    <button hx-get="/api" hx-target="#result">Fetch Data</button>
+    <div id="result">API TESTSPACE HERE</div>
+
+</body>
+</html>
